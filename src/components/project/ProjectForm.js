@@ -11,7 +11,12 @@ export const ProjectForm = ({ btnText }) => {
 
     useEffect(() => {
         //Runs only on the first render
-        fetch('http://localhost:5000/categories')
+        fetch('http://localhost:5000/categories', {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
             .then((resp) => resp.json())
             .then((data) => {
                 setCategories(data)

@@ -1,6 +1,8 @@
+import styles from './ProjectForm.module.css'
+
 export const ProjectForm = () => {
     return (
-        <form>
+        <form className={styles.form}>
 
             <div>
                 <input type="text" placeholder="Insira nome do projeto" />
